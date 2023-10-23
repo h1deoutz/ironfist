@@ -116,9 +116,7 @@
     overflow: hidden;
     overflow-y: scroll;
 }
-.{
 
-}
 .cart h1 {
     color: #2b0086;
     font-weight: 500;
@@ -224,6 +222,7 @@
     border-radius: 15px;
     transition: 0.2s ease;
     font-size: large;
+    margin-bottom: 50px;
 }
 
 .cart .checkout div:hover {
@@ -263,18 +262,20 @@
 }
 
 .box {
-    margin: 30px;
+    border: 2px  solid rgb(233, 233, 233);
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 10px 10px 10px 10px rgb(211, 211, 211);
+    box-shadow: 10px 10px 10px 10px rgb(199, 199, 199);
     border-radius: 5px;
-    padding: 40px;
+    padding: 60px;
+    width: 400px;
 }
 
 .img-box {
     width: 100%;
-    height: 180px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -306,19 +307,15 @@
 }
 
 .bottom button {
-    width: 130px;
+    width: 100%;
     position: relative;
     border: none;
     border-radius: 5px;
     background-color: green;
-    padding: 7px 25px;
+    padding: 12px 25px;
     cursor: pointer;
     color: white;
     transition: .2s ease;
-}
-
-.bottom button:hover {
-    width: 162px;
 }
 
 .lupa {
@@ -330,7 +327,8 @@
 
 .checkout-page {
     position: fixed;
-    padding-left: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 2%;
     right: 100%;
     top: 48px;
@@ -339,8 +337,10 @@
     background-color: rgb(248, 248, 248);
     z-index: 1;
     display: flex;
+    justify-content: space-between;
     overflow: hidden;
     transition: 0.5s;
+    overflow-y: scroll;
 }
 
 .show .checkout-page {
@@ -349,14 +349,16 @@
 
 .step1 {
     width: 40%;
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    flex-direction: row;
     align-items: center;
     
 }
 
 .step1 h2 {
     display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
     font-size: 2em;
     color: #2b0086;
     text-align: center;
@@ -369,11 +371,11 @@
     justify-content: center;
     flex-direction: column;
     border: solid 2px gray;
+    border-radius: 10px;
     
 }
 
 .input-box2 {
-    position: relative;
     width: 100%;
     height: 70px;
     border-bottom: 2px solid #162938;
@@ -424,10 +426,27 @@
 }
 
 .checkbox-gender label input {
-    
     margin-bottom: 10px;
     accent-color: #162938;
     margin-right: 3px;
+}
+
+.step2 {
+    right: 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.payment {
+    display: flex;
+    vertical-align: auto;
+    border: 1px solid  gray;
+    border-radius: 5px;
+    padding: 1px;
+    cursor: pointer;
 }
 
 .lupaicon {
@@ -736,6 +755,7 @@
 }
 
 footer {
+    margin-top: 50px;
     width: 100vw;
     color: rgb(255, 255, 255);
 }

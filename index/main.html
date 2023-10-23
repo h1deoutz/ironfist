@@ -124,13 +124,13 @@
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="margin-top: 10px; box-shadow: 10px 10px 10px 10px rgb(182, 182, 182);"> 
         <div class="carousel-inner">
           <div class="carousel-item active">
-           <picture> <source media="(max-width: 800px )" srcset="img-svg/logo.png" type=""><img src="img-svg/1.PNG" class="d-block w-100" alt="..." style=" height: 450px ;"></picture>
+           <picture> <source media="(max-width: 800px )" srcset="img-svg/logo.png" type=""><img src="img-svg/1.PNG" class="d-block w-100" alt="..." style=" height: 700px ;"></picture>
           </div>
           <div class="carousel-item active">
-            <picture> <source media="(max-width: 800px )" srcset="img-svg/logo.png" type=""><img src="img-svg/1.PNG" class="d-block w-100" alt="..." style=" height: 450px ;" ></picture>
+            <picture> <source media="(max-width: 800px )" srcset="img-svg/logo.png" type=""><img src="img-svg/1.PNG" class="d-block w-100" alt="..." style=" height: 700px ;" ></picture>
            </div>
            <div class="carousel-item active">
-            <picture> <source media="(max-width: 800px )" srcset="img-svg/logo.png" type=""><img src="img-svg/1.PNG" class="d-block w-100" alt="..." style=" height: 450px ;"></picture>
+            <picture> <source media="(max-width: 800px )" srcset="img-svg/logo.png" type=""><img src="img-svg/1.PNG" class="d-block w-100" alt="..." style=" height: 700px ;"></picture>
            </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -197,9 +197,8 @@
         <div class="checkout-page">
           <div class="step1">
 
-            <h2>Identificação</h2>
-            <form class="checkout-form"  action="">
-               
+            <form action="">
+              <h2>Identificação</h2>
 
               <div class="input-box2">
                 <label for="">Nome completo</label>
@@ -247,15 +246,34 @@
               <div class="checkbox-gender">
                 <h6>Gênero</h6>
               <label for=""><input type="checkbox">Masculino</label>
-              <label for=""><input type="checkbox">Masculino</label>
-              <label for=""><input type="checkbox">Masculino</label>
+              <label for=""><input type="checkbox">Feminino</label>
+              <label for=""><input type="checkbox">Outro</label>
               </div>
 
 
+            
+            </div>
+
+          </form>
+
+          <div class="step2">
+            <form action="">
+              <h2>Pagamento</h2>
+              <p>Escolha a forma de pagamento</p>
+              <div class="payment">
+                <span><ion-icon name="card"></ion-icon> <p>Cartão de crédito</p></span>
+              </div>
+              <div class="payment">
+                <span><ion-icon name="qr-code-outline"></ion-icon> <p>Pix à vista</p></span>
+              </div>
+              <div class="payment">
+                <span><i class="fa-solid fa-barcode"></i><p>Boleto à vista</p></span>         
+              </div>
+              
             </form>
+
           </div>
 
-          <div class="step1"></div>
         </div>
 
 
