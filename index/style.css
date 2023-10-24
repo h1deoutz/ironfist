@@ -53,6 +53,22 @@
     right: 2vw;
 }
 
+.remove .carousel {
+    display: none;
+}
+
+.remove .textbanner {
+    display: none;
+}
+
+.remove .banner-frete {
+    display: none;
+}
+
+.remove .banners {
+    display: none;
+}
+
 .login-buttom {
     font-size: 16px;
 }
@@ -330,7 +346,7 @@
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 2%;
-    /*right: 100%;*/
+    right: 100%;
     top: 48px;
     width: 75%;
     height: calc(100vh - 48px);
@@ -379,6 +395,7 @@
     height: 70px;
     border-bottom: 2px solid #162938;
     margin-bottom: 20px;
+
 }
 
 .input-box2 label {
@@ -436,7 +453,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*overflow: hidden;*/
+    overflow: hidden;
     
 }
 
@@ -477,14 +494,11 @@
     margin-top: 13px;
 }
 
-.step2-payment-method {
-    display: none;
-}
-
 .pay1 .step2-payment-method {
     transform: translateX(500px);
     pointer-events: none;
     display: none;
+
 }
 
 .credit-card-header {
@@ -493,22 +507,27 @@
     align-items: center;
 }
 
-.credit-card {
+.none .credit-card {
+    display: none;
+    transform: translateX(-500px);
+}
+
+ .credit-card {
     display: flex;
     flex-direction: column; 
 }
 
-.credit-card span {
+ .credit-card span {
     font-size: 2em;
     margin-right: 10px;
 }
 
-.credit-card h6 {
+ .credit-card h6 {
     font-size: 1em;
     margin-top: 10px;
 }
 
-.credit-card-title {
+ .credit-card-title {
     display: flex;
 }
 
@@ -526,9 +545,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     border-radius: 5px;
     background-color: #dddddd;
+    margin-bottom: 10px;
 }
 
 .safe span{
@@ -547,7 +566,7 @@
 
 .validade {
     display: flex;
-    align-items: center;
+
 }
 
 .validade h6 {
@@ -555,17 +574,14 @@
     margin-top: 7%;
 }
 
-.validade select  {
-    border: none;
-    margin: 5px;
-    background-color: #dddddd;
-    padding: 10px;
-    border-radius: 5px;
+.validade .input-box2 {
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .finish {
-    margin-top: 30px;
-    margin-bottom: -10px;
+    margin-top: 20px;
+    margin-bottom: -20px;
     background-color: #009737;
     display: flex;
     justify-content: center;
@@ -588,7 +604,7 @@
 }
 
 .back {
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;

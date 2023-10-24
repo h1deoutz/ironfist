@@ -201,44 +201,44 @@
               <h2>Identificação</h2>
 
               <div class="input-box2">
-                <label for="">Nome completo</label>
-               <input type="text">
+                <label for="">Nome completo*</label>
+               <input type="text" required>
               </div>
               
 
               <div class="input-box2">
-                <label for="">CPF</label>
-                <input id="cpf" type="text" autocomplete="off" maxlength="14" placeholder="____ . ____ .  ____ - ___">
+                <label for="">CPF*</label>
+                <input id="cpf" type="text" autocomplete="off"  required maxlength="14" placeholder="____ . ____ .  ____ - ___">
               </div>
              
                
               <div class="input-box2">
-                <label for="">Data de Nascimento</label>
-               <input type="text" id="data" maxlength="10" placeholder="___  / ___  / _____">
+                <label for="">Data de Nascimento*</label>
+               <input type="text" required id="data" maxlength="10" placeholder="___  / ___  / ______">
               </div> 
  
                
               <div class="input-box2">
-                <label for="">Cep</label>
-               <input class="phone" id="cep" maxlength="9" type="text" placeholder="_______ - ____"> 
+                <label for="">Cep*</label>
+               <input class="phone" id="cep" maxlength="9" required type="text" placeholder="_______ - ____"> 
               </div>
 
 
               <div class="input-box2">
-                <label for="">Endereço</label>
-               <input class="phone" type="text"> 
+                <label for="">Endereço*</label>
+               <input class="phone" required type="text"> 
               </div>
 
 
               <div class="input-box2">
-                <label for="">Cidade</label>
-               <input class="phone" type="text" > 
+                <label for="">Cidade*</label>
+               <input class="phone" required type="text" > 
               </div>
 
 
               <div class="input-box2">
-                <label for="">Estado</label>
-               <input class="phone" type="search"> 
+                <label for="">Estado*</label>
+               <input class="phone" required type="search"> 
               </div>
               
 
@@ -278,7 +278,7 @@
                       Cartão de crédito
                     </h6>
                   </div>
-                  <div class="alterar"><p>Alterar forma de pagamento</p></div>
+                  <div class="alterar" id="alterar"><p>Alterar forma de pagamento</p></div>
                 </div>
 
                 <div class="safe">
@@ -286,61 +286,44 @@
                 </div>
 
                 <div class="input-box2">
-                  <label for="">Número do cartão de crédito</label>
-                  <input type="text">
+                  <label for="">Número do cartão de crédito*</label>
+                  <input type="text" id="card-number" maxlength="19" required autocomplete="off" placeholder="_____ . _____ . _____ . _____">
                 </div>
 
                 <div class="input-box2">
-                  <label for="">Nome impresso no cartão</label>
-                  <input type="text">
+                  <label for="">Nome impresso no cartão*</label>
+                  <input type="text" required autocomplete="off">
               </div>
 
               <div class="input-box2">
-                <label for="">CPF  do títular</label>
-                <input id="cpf" type="text" autocomplete="off" maxlength="14" placeholder="____ . ____ .  ____ - ___">
+                <label for="">CPF do títular*</label>
+                <input  required id="cepeefi" type="text" autocomplete="off" maxlength="14" placeholder="____ . ____ .  ____ - ___">
               </div>
+
+              <div class="valiade-cvv">
+                <div class="validade">
+                  
+                  <div class="input-box2">
+                    <label for="">Validade*</label>
+                  <input type="text" maxlength="10" id="validade" required placeholder="dd/mm/aaaa">
+                  </div>
+
+                  <div class="input-box2">
+                    <label for="">CVV/CVC*</label>
+                    <input type="text" id="CVV" placeholder="***"  required maxlength="4">
+                  </div>  
 
                 </div>
+                
+                  </div>
 
+                  <button type="submit" class="finish">
+                    <span><i class="fa-solid fa-truck-fast"></i></span> 
+                    <h6>Finalizar compra</h6>
+                  </button> 
+                </div>             
 
-              <div class="validade">
-                <h6>Validade:</h6>
-                <select name="" id="">
-                  <option value="">Janeiro</option>
-                  <option value="">Fevereiro</option>
-                  <option value="">Março</option>
-                  <option value="">Abril</option>
-                  <option value="">Maio</option>
-                  <option value="">Junho</option>
-                  <option value="">Julho</option>
-                  <option value="">Agosto</option>
-                  <option value="">Setembro</option>
-                  <option value="">Outubro</option>
-                  <option value="">Novembro</option>
-                  <option value="">Dezembro</option>
-                </select>
-
-                <select name="" id="">
-                  <option value="">2023</option>
-                  <option value="">2024</option>
-                  <option value="">2025</option>
-                  <option value="">2026</option>
-                  <option value="">2027</option>
-                  <option value="">2028</option>
-                  <option value="">2029</option>
-                  <option value="">2030</option>
-                  <option value="">2031</option>
-                  <option value="">2032</option>
-                  <option value="">2033</option>
-                </select>
-              </div>
-
-              <button type="submit" class="finish">
-                <span><i class="fa-solid fa-truck-fast"></i></span> 
-                <h6>Finalizar compra</h6>
-              </button>
-
-            
+                         
 
             </form>
             
@@ -348,13 +331,9 @@
               <span><ion-icon name="return-down-back-outline"></ion-icon></span> <h6>Continuar comprando</h6>
             </div>
             
-          </div>
-
-          
-          
+          </div>     
 
         </div>
-
 
         <footer>
           <div class="footer-content">

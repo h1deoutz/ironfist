@@ -28,7 +28,7 @@ const filters = [...new Set (btns.map((btn)=>
     document.getElementById('btns').innerHTML=filters.map((btn)=>{
         var {name, id} = btn;
         return(
-            "<button class 'fil-p' onclick='filterItems("+(id)+`)'>${name}</button>`
+            "<button class='fil-p' onclick='filterItems("+(id)+`)'>${name}</button>`
         )
     }).join('');
 
@@ -36,13 +36,16 @@ const formOpenBtn = document.querySelector("#login-buttom"),
 iconClose = document.querySelector(".icon-close"),
 loginLink = document.querySelector("#login-link"),
 registerLink = document.querySelector("#form-register"),
-wrapper = document.querySelector(".wrapper");
+wrapper = document.querySelector(".wrapper"),
+navbtn = document.querySelector("#btns");
 
 
 formOpenBtn.addEventListener("click", () => wrapper.classList.add("show"));
 iconClose.addEventListener("click", () => wrapper.classList.remove("show"));
 registerLink.addEventListener("click", () => wrapper.classList.add("active"));
 loginLink.addEventListener("click", () => wrapper.classList.remove("active"));
+navbtn.addEventListener("click", () => body.classList.add("remove"));
+
 
 let openShopping = document.querySelector('.shopping-cart');
 let closeShopping = document.querySelector('.cart-icon-close');
@@ -65,11 +68,15 @@ closeShopping.addEventListener("click", () => { body.classList.remove ('show');
 
 })
 
-let openCreditard = document.querySelector('#credit-card');
+let openCreditcard = document.querySelector('#credit-card');
+let alterarCreditcard = document.querySelector('#alterar');
 
 openCheckout.addEventListener("click", () => body.classList.add ('show'));
-openCreditard.addEventListener("click", () => { body.classList.add ('pay1');
-
+openCheckout.addEventListener("click", () => body.classList.add ('none'));
+openCreditcard.addEventListener("click", () => body.classList.remove ('none'));
+openCreditcard.addEventListener("click", () =>  body.classList.add ('pay1'));
+alterarCreditcard.addEventListener("click", () =>  body.classList.add('none'));
+alterarCreditcard.addEventListener("click", () => { body.classList.remove ('pay1');
 
 })
 
@@ -315,4 +322,36 @@ input3.addEventListener('keypress',() => {
 }
 })
 
+const input4 = document.querySelector('#cepeefi')
 
+input4.addEventListener('keypress',() => {
+    let inputlength = input4.value.length
+
+    if (inputlength === 3 || inputlength === 7) {
+        input4.value += '.'
+    }else if (inputlength === 11) {
+        input4.value += '-'
+    }
+}) 
+
+const input5 = document.querySelector('#card-number')
+
+input5.addEventListener('keypress',() => {
+    let input2length = input5.value.length
+
+    if (input2length === 4 || input2length === 9  || input2length === 14) {
+        input5.value += '.'
+
+}
+})
+
+const input6 = document.querySelector('#validade')
+
+input6.addEventListener('keypress',() => {
+    let input2length = input6.value.length
+
+    if (input2length === 2 || input2length === 5) {
+        input6.value += '/'
+
+}
+})
