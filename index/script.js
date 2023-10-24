@@ -61,7 +61,14 @@ let closeCheckout = document.querySelector('.back');
 
 openCheckout.addEventListener("click", () => body.classList.add ('show'));
 closeCheckout.addEventListener("click", () => body.classList.remove ('show'));
-closeShopping.addEventListener("click", () =>{ body.classList.remove ('show');
+closeShopping.addEventListener("click", () => { body.classList.remove ('show');
+
+})
+
+let openCreditard = document.querySelector('#credit-card');
+
+openCheckout.addEventListener("click", () => body.classList.add ('show'));
+openCreditard.addEventListener("click", () => { body.classList.add ('pay1');
 
 
 })

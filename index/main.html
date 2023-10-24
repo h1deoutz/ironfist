@@ -249,8 +249,6 @@
               <label for=""><input type="checkbox">Feminino</label>
               <label for=""><input type="checkbox">Outro</label>
               </div>
-
-
             
             </div>
 
@@ -259,20 +257,91 @@
           <div class="step2">
             <form action="">
               <h2>Pagamento</h2>
-              <p>Escolha a forma de pagamento</p>
+             <div class="step2-payment-method">
+              <h6>Escolha a forma de pagamento</h6>
+              <div class="payment" id="credit-card">
+                <span><ion-icon name="card"></ion-icon></span> <p>Cartão de crédito</p>
+              </div> 
               <div class="payment">
-                <span><ion-icon name="card"></ion-icon> <p>Cartão de crédito</p></span>
+                <span><ion-icon name="qr-code-outline"></ion-icon></span> <p>Pix à vista</p>
               </div>
               <div class="payment">
-                <span><ion-icon name="qr-code-outline"></ion-icon> <p>Pix à vista</p></span>
+                <span><i class="fa-solid fa-barcode"></i></span> <p>Boleto à vista</p> 
+              </div>             
               </div>
-              <div class="payment">
-                <span><i class="fa-solid fa-barcode"></i><p>Boleto à vista</p></span>         
+              
+              <div class="credit-card">
+
+                <div class="credit-card-header">
+                  <div class="credit-card-title">
+                    <span><ion-icon name="card"></ion-icon></span> <h6>
+                      Cartão de crédito
+                    </h6>
+                  </div>
+                  <div class="alterar"><p>Alterar forma de pagamento</p></div>
+                </div>
+
+                <div class="safe">
+                  <span><i class="fa-solid fa-lock"></i></span> <p>Este é um pagamento seguro, realizado em ambiente criptografado.</p>
+                </div>
+
+                <div class="input-box2">
+                  <label for="">Número do cartão de crédito</label>
+                  <input type="text">
+                </div>
+
+                <div class="input-box2">
+                  <label for="">Nome impresso no cartão</label>
+                  <input type="text">
               </div>
-              <div class="finish">
+
+              <div class="input-box2">
+                <label for="">CPF  do títular</label>
+                <input id="cpf" type="text" autocomplete="off" maxlength="14" placeholder="____ . ____ .  ____ - ___">
+              </div>
+
+                </div>
+
+
+              <div class="validade">
+                <h6>Validade:</h6>
+                <select name="" id="">
+                  <option value="">Janeiro</option>
+                  <option value="">Fevereiro</option>
+                  <option value="">Março</option>
+                  <option value="">Abril</option>
+                  <option value="">Maio</option>
+                  <option value="">Junho</option>
+                  <option value="">Julho</option>
+                  <option value="">Agosto</option>
+                  <option value="">Setembro</option>
+                  <option value="">Outubro</option>
+                  <option value="">Novembro</option>
+                  <option value="">Dezembro</option>
+                </select>
+
+                <select name="" id="">
+                  <option value="">2023</option>
+                  <option value="">2024</option>
+                  <option value="">2025</option>
+                  <option value="">2026</option>
+                  <option value="">2027</option>
+                  <option value="">2028</option>
+                  <option value="">2029</option>
+                  <option value="">2030</option>
+                  <option value="">2031</option>
+                  <option value="">2032</option>
+                  <option value="">2033</option>
+                </select>
+              </div>
+
+              <button type="submit" class="finish">
                 <span><i class="fa-solid fa-truck-fast"></i></span> 
                 <h6>Finalizar compra</h6>
-              </div>
+              </button>
+
+            
+
             </form>
             
             <div class="back">
