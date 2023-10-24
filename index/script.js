@@ -57,8 +57,12 @@ closeShopping.addEventListener('click', () =>{ body.classList.remove ('active');
 })
 
 let openCheckout = document.querySelector('.checkout');
+let closeCheckout = document.querySelector('.back');
 
-openCheckout.addEventListener("click", () =>{ body.classList.add ('show');
+openCheckout.addEventListener("click", () => body.classList.add ('show'));
+closeCheckout.addEventListener("click", () => body.classList.remove ('show'));
+closeShopping.addEventListener("click", () =>{ body.classList.remove ('show');
+
 
 })
 
@@ -269,5 +273,39 @@ function displaycart(a){
     }
 
 }
+
+const input = document.querySelector('#cpf')
+
+input.addEventListener('keypress',() => {
+    let inputlength = input.value.length
+
+    if (inputlength === 3 || inputlength === 7) {
+        input.value += '.'
+    }else if (inputlength === 11) {
+        input.value += '-'
+    }
+})
+
+const input2 = document.querySelector('#data')
+
+input2.addEventListener('keypress',() => {
+    let input2length = input2.value.length
+
+    if (input2length === 2 || input2length === 5) {
+        input2.value += '/'
+
+}
+})
+
+const input3 = document.querySelector('#cep')
+
+input3.addEventListener('keypress',() => {
+    let input3length = input3.value.length
+
+    if (input3length === 5) {
+        input3.value += '-'
+
+}
+})
 
 
