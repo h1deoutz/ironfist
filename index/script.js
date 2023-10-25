@@ -76,7 +76,9 @@ openCheckout.addEventListener("click", () => body.classList.add ('none'));
 openCreditcard.addEventListener("click", () => body.classList.remove ('none'));
 openCreditcard.addEventListener("click", () =>  body.classList.add ('pay1'));
 alterarCreditcard.addEventListener("click", () =>  body.classList.add('none'));
-alterarCreditcard.addEventListener("click", () => { body.classList.remove ('pay1');
+alterarCreditcard.addEventListener("click", () =>  body.classList.remove ('pay1'));
+closeShopping.addEventListener("click", () =>  body.classList.remove ('pay1'));
+closeShopping.addEventListener("click", () => { body.classList.add('none');
 
 })
 

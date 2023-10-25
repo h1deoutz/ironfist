@@ -112,10 +112,14 @@
             <div id="btns">
             </div>
             
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" style="width: 30vw;">
-              <button class="lupa" type="submit"><ion-icon class="lupaicon" name="search-outline"></ion-icon></button>
-            </form>
+            <section class="searchbar" id="searchbar">
+              <form action="">
+                  <span><ion-icon name="search-outline"></ion-icon></span>
+                  <input type="text" id="search-item" placeholder="Pesquisar produtos...">
+              </form>
+              <div class="product-list"></div>
+          </section>
+
           </div>
         </div>
       </nav>
