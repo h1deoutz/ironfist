@@ -7,7 +7,7 @@
         xhttp.onload = function() {
             document.getElementById("demo").innerHTML = this.responseText;
             }
-        xhttp.open("GET", "consuser.php", true);
+        xhttp.open("GET", "compuser.php", true);
         xhttp.send();
         }
     </script>
