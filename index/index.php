@@ -69,7 +69,7 @@
 
             <div class="form-box register">
               <h2>Cadastrar-se</h2>
-              <form action="">
+              <form action="caduser.php">
                 <div class="input-box">
                   <span class="icon"><ion-icon name="person"></ion-icon></span>
                   <input type="text" name= "nome"required>
@@ -237,7 +237,7 @@
 
               <div class="input-box2">
                 <label for="">Nome completo*</label>
-               <input type="text" required>
+               <input type="text" name="nome_completo" required>
               </div>
               
 
