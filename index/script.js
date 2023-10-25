@@ -61,10 +61,13 @@ closeShopping.addEventListener('click', () =>{ body.classList.remove ('active');
 
 let openCheckout = document.querySelector('.checkout');
 let closeCheckout = document.querySelector('.back');
+let openSearchbar = document.querySelector('.searchbar');
+let search = document.querySelector('.searchbar');
 
 openCheckout.addEventListener("click", () => body.classList.add ('show'));
 closeCheckout.addEventListener("click", () => body.classList.remove ('show'));
-closeShopping.addEventListener("click", () => { body.classList.remove ('show');
+closeShopping.addEventListener("click", () =>  body.classList.remove ('show'));
+openSearchbar.addEventListener("click", () => { body.classList.add ('show');
 
 })
 
