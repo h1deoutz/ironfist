@@ -62,14 +62,24 @@ closeShopping.addEventListener('click', () =>{ body.classList.remove ('active');
 let openCheckout = document.querySelector('.checkout');
 let closeCheckout = document.querySelector('.back');
 let openSearchbar = document.querySelector('.searchbar');
-let search = document.querySelector('.searchbar');
+let searchbar = document.querySelector('.searchbar');
 
 openCheckout.addEventListener("click", () => body.classList.add ('show'));
 closeCheckout.addEventListener("click", () => body.classList.remove ('show'));
 closeShopping.addEventListener("click", () =>  body.classList.remove ('show'));
-openSearchbar.addEventListener("click", () => { body.classList.add ('show');
+openSearchbar.addEventListener("keypress", () =>  searchbar.classList.add ('active'));
+openSearchbar.addEventListener("keypress", () => { searchbar.classList.remove ('none');
 
 })
+
+document.addEventListener('click', e => {
+    console.log(e.target)
+    if(!searchbar.contains(e.target) && e.target !== openSearchbar) {
+        searchbar.classList.remove('active')
+    }
+})
+
+
 
 let openCreditcard = document.querySelector('#credit-card');
 let alterarCreditcard = document.querySelector('#alterar');
@@ -243,7 +253,7 @@ document.getElementById('root').innerHTML = items.map((item)=>
                 </div></a>
             <div class='bottom'>
         <p>${name}</p>
-        <h2 class="item-price">$${price}.00</h2>`+
+        <h2 class="item-price">R$${price}.00</h2>`+
         "<button onclick='addtocart("+(i++)+")'>Comprar</button>"+
         `</div>
         </div>`
@@ -271,21 +281,21 @@ function displaycart(a){
     if(cart.length==0){
         document.getElementById('cartItem').innerHTML = `<span><ion-icon class="shopping-cart-icon-empty" name="cart-outline"></ion-icon></span>
         <h4>Seu carrinho está vazio</h4>`;
-        document.getElementById("total").innerHTML ="$ "+0+".00";
+        document.getElementById("total").innerHTML ="R$ "+0+".00";
     }
     else{
         document.getElementById("cartItem").innerHTML = cart.map((items)=>
         {
             var {image, name, price, link} = items;
             total=total=price
-            document.getElementById("total").innerHTML = "$ "+total+".00";
+            document.getElementById("total").innerHTML = " R$"+total+".0 0";
             return(
                 `<div class='cart-item'>
                 <div class='row-img'>
                     <img class='rowimg' src=${image}>
                 </div>
-                <p style='font-size:12p;'>${name}</p>
-                <h2 style='font-size:12px;'>$ ${price}.00</h2>`+
+                <p style='font-size:18px;'>${name}</p>
+                <h2 style='font-size:15px;'>R$ ${price}.00</h2>`+
                 "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
             );    
         }).join(''); 

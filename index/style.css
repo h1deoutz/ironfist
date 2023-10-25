@@ -6,16 +6,11 @@
 #btns {
     display: flex;
     margin-right: 70px;
-    background-color: #f1f1f1;
 }
 
-.fil-p {
-    background-color: #f1f1f1;
-}
 
-.body {
-    background-color: #f1f1f1;
-}
+
+
 
 .collapse {
     display: flex;
@@ -27,7 +22,7 @@
     font-size: large;
     font-weight: 500;
     border: none;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 5px;
@@ -82,7 +77,7 @@
 .searchbar {
     position: absolute;
     width: 375px;
-    height: 520px;
+    height: 65px;
     background: rgb(255, 255, 255);
     border-radius: 15px;
     box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.06);
@@ -93,6 +88,12 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    transition: .8s ease;
+}
+
+.searchbar.active {
+    height: 520px;
+
 }
 
 .searchbar form {
