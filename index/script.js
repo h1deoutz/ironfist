@@ -14,10 +14,10 @@ const btns=[
     },
     {
         id: 4,
-        name: 'Hipercalóricos'
+        name: 'Termogênicos'
     },
     {
-        id: 4,
+        id: 5,
         name: 'Glutaminas'
     },
 ]
@@ -67,8 +67,8 @@ let searchbar = document.querySelector('.searchbar');
 openCheckout.addEventListener("click", () => body.classList.add ('show'));
 closeCheckout.addEventListener("click", () => body.classList.remove ('show'));
 closeShopping.addEventListener("click", () =>  body.classList.remove ('show'));
-openSearchbar.addEventListener("keypress", () =>  searchbar.classList.add ('active'));
-openSearchbar.addEventListener("keypress", () => { searchbar.classList.remove ('none');
+openSearchbar.addEventListener("click", () =>  searchbar.classList.add ('active'));
+openSearchbar.addEventListener("click", () => { searchbar.classList.remove ('none');
 
 })
 
@@ -98,7 +98,7 @@ closeShopping.addEventListener("click", () => { body.classList.add('none');
 const product = [ 
     {
         "id":1,
-        "name": "Whey protein",
+        "name": "Whey Protein Concentrado 1Kg Sabor Morango",
         "price": 50,
         "image": "img-svg/whey1.jpeg",
         "category":"whey protein",
@@ -260,7 +260,8 @@ document.getElementById('root').innerHTML = items.map((item)=>
          )
 }).join('');
 }
-displayItem(categories);
+
+displayItem(categories);  
  
 
 var cart = [];
@@ -288,7 +289,7 @@ function displaycart(a){
         {
             var {image, name, price, link} = items;
             total=total=price
-            document.getElementById("total").innerHTML = " R$"+total+".0 0";
+            document.getElementById("total").innerHTML = " R$"+total+".00";
             return(
                 `<div class='cart-item'>
                 <div class='row-img'>
@@ -302,6 +303,7 @@ function displaycart(a){
     }
 
 }
+    
 
 const input = document.querySelector('#cpf')
 
@@ -370,3 +372,36 @@ input6.addEventListener('keypress',() => {
 
 }
 })
+
+console.log(searchbar);
+
+searchbar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value;
+    const filteredItems = product.filter( (items) => {
+        return (
+            items.name.includes(searchString)
+        );
+    });
+    displayItems(filteredItems);
+}); 
+
+let  div = document.getElementById("product-list");
+div.innerHTML = product.map((items)=> 
+{
+    var {image, name, price, link} = items;
+    total=total=price
+    document.getElementById("product-list").innerHTML = "";
+    return(
+        `<div class="list-item">
+        <a href="${link}">
+          <img src="${image}" alt="">
+            <div class="text">
+              <p>${name}</p>
+              <h2>R$ ${price}.00</h2>
+              </a>
+            </div>`
+
+    );    
+}).join(''); 
+
+

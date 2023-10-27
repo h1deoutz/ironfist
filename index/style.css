@@ -76,12 +76,12 @@
 
 .searchbar {
     position: absolute;
-    width: 375px;
+    width: 400px;
     height: 65px;
     background: rgb(255, 255, 255);
     border-radius: 15px;
     box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.06);
-    z-index: 2;
+    z-index: 1;
     padding: 10px;
     right: 20px;
     top: 60px;
@@ -89,6 +89,7 @@
     flex-direction: row;
     justify-content: center;
     transition: .8s ease;
+    overflow: hidden;
 }
 
 .searchbar.active {
@@ -99,9 +100,9 @@
 .searchbar form {
     position: absolute;
     left: 10px;
-    width: 355px;
-    border: 1px solid;
-    border-radius:  10px;
+    width: 380px;
+    border-bottom: 1px solid;
+    border-radius:  px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -121,6 +122,49 @@
     padding-left: 10px;
     padding-top: 3px;
     font-size: 1.3em;
+}
+
+.product-list {
+    display: flex;
+    justify-content: ;
+    margin-top: 50px;
+    width: 100%;
+    overflow: scroll;
+}
+
+
+.list-item  {
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+.list-item img {
+    width: 40px;
+    float: left;
+
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+}
+
+.list-item p {
+    color: #0c1820;
+    width: 100%;
+    font-size: 1em;
+    margin: 0%;
+}
+
+
+.list-item h2 {
+    color: #0c1820;
+    font-size: 1em;
+    margin: 0;
+
+
 }
 
 .login-buttom {
@@ -409,7 +453,7 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-    transition: 0.5s;
+    transition: 0.8s;
     overflow-y: scroll;
 }
 
