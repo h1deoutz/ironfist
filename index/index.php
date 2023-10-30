@@ -115,9 +115,12 @@
             <section class="searchbar none" >
               <form action="" id="searchbar">
                   <span><ion-icon name="search-outline"></ion-icon></span>
-                  <input type="text" id="search-item" placeholder="Pesquisar produtos...">
+                  <input type="text" id="search-item" placeholder="Pesquisar produtos..." autocomplete="off">
+                  
               </form>
-              <div class="product-list"></div>
+              <div class="product-list" id="product-list">
+                
+              </div>
           </section>
 
           </div>
@@ -216,12 +219,10 @@
         <span class="cart-icon-close"><ion-icon name="close-outline"></ion-icon>
           </span>
 
-
             <div class="total">
               <h4>Total</h4>
               <h4 id="total">R$0,00</h4>
             </div>
-      
                 
           <div class="checkout">
               <div>Checkout</div>
@@ -437,6 +438,7 @@
             2023 todos os direitos reservados
           </div>
         </footer>
+
         
         <script src="script.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
