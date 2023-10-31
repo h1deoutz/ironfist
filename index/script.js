@@ -98,9 +98,9 @@ closeShopping.addEventListener("click", () => { body.classList.add('none');
 const product = [ 
     {
         "id":1,
-        "name": "Whey Protein Concentrado 1Kg Sabor Morango",
+        "name": "Whey Protein Concentrado IronFist 1Kg",
         "price": 50,
-        "image": "img-svg/whey1.jpeg",
+        "image": "img-svg/ironfist.whey.chocolate.png",
         "category":"whey protein",
         "link": "paginas/produto1.html"
     },
@@ -403,5 +403,7 @@ div.innerHTML = product.map((items)=>
 
     );    
 }).join(''); 
+
+
 
 
