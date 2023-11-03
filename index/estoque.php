@@ -32,6 +32,50 @@
             </li>
             
         </ul>
+        
+        <?php
+          include 'connect.php';
+
+        $sql = "SELECT id, nome_prod, desc_prod, preco, img, categoria FROM produto";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+          //echo "id: " . $row["id"]. " - Nome: " . $row["nome_prod"]. " " . $row["desc_prod"]. " " .$row["preco"]. "<br>";
+          
+        
+        ?>
+        <ul>
+            <li>
+                <p class="id">ID: <h6><?php echo $row["id"]?></h6> </p>
+                <p class="name">Nome: <h6><?php echo $row["nome_prod"]?></h6> </p>
+                <p class="category">Categoria: <h6><?php echo $row["categoria"]?></h6> </p>
+                <p class="price">Preço: <h6><?php echo $row["preco"]?></h6> </p>
+                <p class="description">Descrição: <h6><?php echo $row["desc_prod"]?></h6> </p>
+                <p class="image">Imagem: <h6><img src = "<?php echo $row["img"]?>"/></h6> </p>
+                <button>Deletar</button>
+            </li>
+            
+        </ul>
+        <div class="box">
+            <a href="paginas/produto1.php">
+            <div class="img-box">
+                <img class="images" src="">
+            </div></a>
+            <div class="bottom">6
+              <p></p>
+              <h2 class="item-price"></h2><button onclick="addtocart(1)">Comprar</button></div>
+            </div>
+        </div>
+        </div>
+        <?php
+        }
+      } else {
+        echo "0 results";
+      }
+        $conn->close();
+        ?>    
     </div>
 
     <div class="addproduct">
