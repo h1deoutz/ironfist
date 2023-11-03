@@ -19,7 +19,7 @@ include 'connect.php';
 
   
 
-  header("Location: /ironfist/index/estoque.php");
+  header("Location: /ironfist/index/estoque.php?");
   
 
 ?>
