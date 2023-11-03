@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script>
+            function deleta_produto(id) { 
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            alert(this.responseText);
+            }
+        xhttp.open("POST", "delete.php", true);
+        xhttp.send("id");
+        }            
+        </script>    
 </head>
 <body class="body">
     
@@ -16,6 +27,7 @@
         <img src="img-svg/ironfist.png" alt="">
         <h2>Estoque de produtos IronFist</h2>
         <button id="add-product">+</button>
+        
     </header>
 
     
@@ -43,7 +55,7 @@
                 <p class="price">Preço: <h6><?php echo $row["preco"]?></h6> </p>
                 <p class="description">Descrição: <h6><?php echo $row["desc_prod"]?></h6> </p>
                 <p class="image">Imagem: <h6><img src = "<?php echo $row["img"]?>"/></h6> </p>
-                <button value = "<?php echo $row["id"]?>">Deletar</button>
+                <button onclick="deleta_produto(this.value)" value = "<?php echo $row["id"]?>">Deletar</button>
             </li>
             
         </ul>
@@ -56,35 +68,35 @@
         ?>           
     </div>
 
-    <div class="addproduct">
+    <div class="addproduct active">
         <div class="title"><h2>Criar novo produto</h2>
         <span id="close"><ion-icon name="close"></ion-icon></span>
     </div>
 
-        <form action="">
+        <form action="cadprod.php">
 
             <label for="">Nome:</label>
-            <input type="text">
+            <input name = "produto" type="text">
 
             <label for="">Categoria:</label>
-            <select name="" id="">
-                <option value="">whey protein</option>
-                <option value="">creatina</option>
-                <option value="">pre treino</option>
-                <option value="">termogenico</option>
-                <option value="">glutamina</option>
-                <option value="">roupas</option>
-                <option value="">acessorios</option>
+            <select name="categoria" id="">
+                <option value="whey protein">whey protein</option>
+                <option value="creatina">creatina</option>
+                <option value="pre treino">pre treino</option>
+                <option value="termogenico">termogenico</option>
+                <option value="glutamina">glutamina</option>
+                <option value="roupas">roupas</option>
+                <option value="acessorios">acessorios</option>
             </select>
 
             <label for="">Preço:</label>
-            <input type="text">
+            <input name="preco" type="text">
 
             <label for="" class="description-input">Descrição:</label>
-            <textarea name="" id="" cols="30" rows="6"></textarea>
+            <textarea name="descricao" id="" cols="30" rows="6"></textarea>
 
             <label for="">Imagem:</label>
-            <input type="text">
+            <input name="img" type="text">
 
             <button type="submit" id="submitproduct">Adicionar</button>
 
