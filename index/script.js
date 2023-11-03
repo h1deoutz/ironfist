@@ -405,4 +405,3 @@ div.innerHTML = product.map((items)=>
 }).join(''); 
 
 
-a
