@@ -180,7 +180,7 @@
         <?php
           include 'connect.php';
 
-        $sql = "SELECT id, nome_prod, desc_prod, preco, img FROM produto";
+        $sql = "SELECT id, nome_prod, desc_prod, preco, img, categoria FROM produto";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -191,7 +191,7 @@
         
         ?>
         <div class="box">
-            <a href="paginas/produto1.html">
+            <a href="paginas/produto1.php">
             <div class="img-box">
                 <img class="images" src="<?php echo $row["img"]?>">
             </div></a>
