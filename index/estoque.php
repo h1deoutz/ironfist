@@ -20,18 +20,7 @@
 
     
     <div class="product-list">
-        <ul>
-            <li>
-                <p class="id">ID: <h6></h6> </p>
-                <p class="name">Nome: <h6></h6> </p>
-                <p class="category">Categoria: <h6></h6> </p>
-                <p class="price">Preço: <h6></h6> </p>
-                <p class="description">Descrição: <h6></h6> </p>
-                <p class="image">Imagem: <h6></h6> </p>
-                <button>Deletar</button>
-            </li>
-            
-        </ul>
+  
         
         <?php
           include 'connect.php';
@@ -54,28 +43,17 @@
                 <p class="price">Preço: <h6><?php echo $row["preco"]?></h6> </p>
                 <p class="description">Descrição: <h6><?php echo $row["desc_prod"]?></h6> </p>
                 <p class="image">Imagem: <h6><img src = "<?php echo $row["img"]?>"/></h6> </p>
-                <button>Deletar</button>
+                <button value = "<?php echo $row["id"]?>">Deletar</button>
             </li>
             
         </ul>
-        <div class="box">
-            <a href="paginas/produto1.php">
-            <div class="img-box">
-                <img class="images" src="">
-            </div></a>
-            <div class="bottom">6
-              <p></p>
-              <h2 class="item-price"></h2><button onclick="addtocart(1)">Comprar</button></div>
-            </div>
-        </div>
-        </div>
         <?php
         }
       } else {
         echo "0 results";
       }
         $conn->close();
-        ?>    
+        ?>           
     </div>
 
     <div class="addproduct">
