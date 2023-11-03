@@ -101,13 +101,13 @@
 
       <nav class="navbar navbar-expand-lg bg-body-primary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="main.html"><img src="img-svg/logo.png" alt="" style="width: 250px; margin: 0px 15px; margin-top: 48px; "></a>
+          <a class="navbar-brand" href="index.php"><img src="img-svg/logo.png" alt="" style="width: 250px; margin: 0px 15px; margin-top: 48px; "></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             
-            <a href="main.html"><button>Home</button></a>
+            <a href="index.php"><button>Home</button></a>
 
             <div id="btns">
             </div>
