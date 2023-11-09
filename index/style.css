@@ -1,16 +1,17 @@
+/*  A sessao "*" se aplica a todos os elementos */
+
 * {
     box-sizing: border-box;
-    
 }
+
+/* Estilizaçao dos botoes de filtro da navbar */
 
 #btns {
     display: flex;
     margin-right: 70px;
 }
 
-
-
-
+/* Estilizaçao da navbar */
 
 .collapse {
     display: flex;
@@ -57,6 +58,8 @@
     right: 2vw;
 }
 
+/* Esta sessao esconde elementos da pagina usando disply: none */
+
 .remove .carousel {
     display: none;
 }
@@ -69,10 +72,7 @@
     display: none;
 }
 
-.remove .banners {
-    display: none;
-    
-}
+/* Estilizaçao da barra de pesquisa */
 
 .searchbar {
     position: absolute;
@@ -167,6 +167,8 @@
 
 }
 
+/* Estilizaçao do botao de login */
+
 .login-buttom {
     font-size: 16px;
 }
@@ -183,6 +185,8 @@
     font-weight: 500;
     padding-left: 7px;
 }
+
+/* Estilizaçao do botao do carrinho */
 
 .shopping-cart {
     display: inline;
@@ -217,6 +221,8 @@
     padding-left: 7px;
 }
 
+/* Estilizaçao do carrinho */
+
 .cart {
     position: fixed;
     border-left: solid 2px gray;
@@ -241,6 +247,8 @@
     align-items: center;
     justify-content: center;
 }
+
+/* Estilizaçao dos itens adicionados ao carrinho */
 
 #cartItem {
     margin: 10px;
@@ -366,6 +374,8 @@
     left: calc(100% - 25%);
 }
 
+/* Estilizaçao dos produtos da pagina principal */
+
 
  #root {
     display: flex;
@@ -439,6 +449,8 @@
     background-color: white;
 }
 
+/* Estilizaçao da pagina de checkout */
+
 .checkout-page {
     position: fixed;
     padding-left: 5%;
@@ -468,6 +480,8 @@
     align-items: center;
     
 }
+
+/* Estilizaçao do formulario de identificaçao */
 
 .step1 h2 {
     display: flex;
@@ -545,6 +559,8 @@
     margin-right: 3px;
 }
 
+/* Estilizaçao da seleçao de forma de pagamento */
+
 .step2 {
     right: 0;
     width: 40%;
@@ -567,6 +583,8 @@
 .step2 h6 {
     padding-bottom: 20px;
 }
+
+/* Estilizaçao do primeiro metodo de pagamento */
 
 .payment {
     display: flex;
@@ -677,6 +695,8 @@
     margin-left: 10px;
 }
 
+/* Estilizaçao do botao de finalizar pagamento*/
+
 .finish {
     margin-top: 20px;
     margin-bottom: -20px;
@@ -700,6 +720,8 @@
     font-size: 1.4em;
     color: #ffffff;
 }
+
+/* Estilizaçao do botao de continu*/
 
 .back {
     margin-top: 20px;
@@ -737,69 +759,7 @@
     font-size: 35px;
 }
 
-.banners {
-    margin-top: 100px ;
-    margin-bottom: 100px ;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    
-}
-
-.card {
-    margin: 0;
-    height: 290px;
-    width: 330px;
-    box-shadow: 10px 10px 10px 10px rgb(211, 211, 211);
-    background-image: url(img-svg/cutting.jpg);
-    background-size: cover;
-    padding: 5px 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #a5a5a5;
-    letter-spacing: 1px;
-    transition: 0.2s ease;
-    
-}
-
-.card1 {
-    background-image: url(img-svg/cutting.jpg) 
-}
-
-.card2{
-    background-image: url(img-svg/performance.jpg)
-}
-
-.card3 {
-    background-image: url(img-svg/bulking.jpg)
-}
-
-.card4 {
-    background-image: url(img-svg/healthy.jpg)
-}
-
-.card:hover {
-    margin-right: -10px;
-    margin-top: -10px ;
-    margin-bottom: -10px ;
-    height: 300px;
-    width: 340px;
-}
-
-.textbanner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.textbanner h1 {
-    padding-top: 30px;
-    margin-bottom: -30px;
-    color: rgb(68, 68, 68);
-    font-size: 50px;
-    letter-spacing: 1px;
-}
-
+/* Estilizaçao do popup de login/cadastro */
 
 .wrapper {
     margin: 0;
@@ -859,6 +819,8 @@
     z-index: 1;
 }
 
+/* Estilizaçao do formulario de login */
+
 .wrapper .form-box.login {
    transition: transform .18s  ease;
    transform: translateX(0);
@@ -868,6 +830,8 @@
     transition: none;
     transform: translateX(-400px);
 }
+
+/* Estilizaçao do formulario de cadastro */
 
 .wrapper .form-box.register {
     position: absolute;
@@ -1000,6 +964,9 @@
     text-decoration: underline;
 }
 
+/* Estilizaçao do banner de frete gratis */
+
+
 .banner-frete {
     display: flex ;
     align-items: center;
@@ -1029,6 +996,9 @@
     align-items: center;
     border-radius: 15px;
 }
+
+/* Estilizaçao do rodapé */
+
 
 footer {
     margin-top: 50px;
@@ -1146,79 +1116,4 @@ footer p {
     height: 100%;
     border-radius: 0px 4px 4px 0px;
     cursor: pointer;
-}
-
-.product-page {
-    display: flex;
-    margin-top: 30px;
-}
-
-.product-page img {
-    width: 50%;
-    height: 50%;
-    margin: -50px;
-    margin-left: 30px;
-}
-
-.product-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40%;
-}
-
-.product-info p {
-    font-size: 1.2em;
-    font-weight: 500;
-}
-
-.product-info h2 {
-    margin-bottom: 20px;
-}
-
-.product-info button {
-    background-color: #ffffff;
-    padding: 10px;
-    width: 200px;
-    border: 1px solid;
-    margin-top: 10px;
-    transition: .2s ease;
-}
-
-.product-info button:hover{
-    background-color: #f7f7f7;
-}
-
-.add button {
-    margin-top: 20px;
-    background-color: #009737;
-    color: white;
-    width: 250px;
-    height: 60px;
-    border-radius: 5px;
-    transition: .2s ease;
-}
-
-.add button:hover {
-    background-color: #007c2e;
-}
-
-.about {
-    width: 80%;
-    margin: 50px;
-}
-
-.description {
-    width: 40%;
-    margin: 70px
-}
-
-.description h2 {
-    margin-top: 30px;
-    font-size: 1.5em;
-}
-
-.description p {
-    font-size: 1em;
-    font-weight: 400;
 }
