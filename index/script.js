@@ -102,7 +102,7 @@ const product = [
         "price": 50,
         "image": "./img-svg/ironfist.whey.chocolate.png",
         "category":"whey protein",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":1,
@@ -110,7 +110,7 @@ const product = [
         "price": 80,
         "image": "img-svg/whey2.jpg",
         "category":"whey protein",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":1,
@@ -118,7 +118,7 @@ const product = [
         "price": 100,
         "image": "img-svg/whey3.jpeg",
         "category":"whey protein",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":1,
@@ -126,7 +126,7 @@ const product = [
         "price": 170,
         "image": "img-svg/whey4.png",
         "category":"whey protein",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":2,
@@ -134,7 +134,7 @@ const product = [
         "price": 40,
         "image": "img-svg/creatina1.webp",
         "category":"creatina",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":2,
@@ -142,7 +142,7 @@ const product = [
         "price": 180,
         "image": "img-svg/creatina2.webp",
         "category":"creatina",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":2,
@@ -150,7 +150,7 @@ const product = [
         "price": 90,
         "image": "img-svg/creatina3.jpg",
         "category":"creatina",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":3,
@@ -158,7 +158,7 @@ const product = [
         "price": 130,
         "image": "img-svg/pre1.jpeg",
         "category":"pre treino",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":3,
@@ -166,7 +166,7 @@ const product = [
         "price": 130,
         "image": "img-svg/pre2.webp",
         "category":"pre treino",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":3,
@@ -174,7 +174,7 @@ const product = [
         "price": 130,
         "image": "img-svg/pre3.jpg",
         "category":"pre treino",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":1,
@@ -182,7 +182,7 @@ const product = [
         "price": 130,
         "image": "img-svg/whey6.jpeg",
         "category":"whey protein",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":4,
@@ -190,7 +190,7 @@ const product = [
         "price": 130,
         "image": "img-svg/termo1.jpeg",
         "category":"termogenico",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":4,
@@ -198,7 +198,7 @@ const product = [
         "price": 130,
         "image": "img-svg/termo2.jpeg",
         "category": "termogenico",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":5,
@@ -206,7 +206,7 @@ const product = [
         "price": 130,
         "image": "img-svg/glutamina3.jpeg",
         "category": "glutamina",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":1,
@@ -214,7 +214,7 @@ const product = [
         "price": 130,
         "image": "img-svg/whey5.jpeg",
         "category": "whey protein",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":1,
@@ -222,7 +222,7 @@ const product = [
         "price": 130,
         "image": "img-svg/whey7.jpeg",
         "category": "whey protein",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
 ];
 
