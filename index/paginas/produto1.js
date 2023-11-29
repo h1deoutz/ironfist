@@ -1,3 +1,5 @@
+/* Funçoes responsaveis por alterar a imagem do produto  ao clicar o botao de sabor */
+
 function changeImage1()
 {
     var img  =  document.getElementById('image');

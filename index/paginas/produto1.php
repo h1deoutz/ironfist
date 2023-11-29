@@ -290,9 +290,15 @@
 
         </div>
 
+        <!-- Início do codigo da pagina de produto -->
+
         <div class="product-page">
 
+        <!-- Imagem do produto  -->
+
             <img src="../img-svg/ironfist.whey.chocolate.png" class="reponsive" alt="" id="image">
+
+            <!-- Botoes de seleçao de sabor -->
 
             <div class="product-info">
               <h2>Whey Protein Concentrado IronFist 1Kg</h2>
@@ -300,6 +306,9 @@
               <button onclick="changeImage2()">Morango</button>
               <button onclick="changeImage3()">Baulinha</button>
               <div class="add"><button onclick='addtocart("+(i++)+")'>Adicionar ao carrinho</button></div>
+
+              <!-- Descriçao do produto -->
+
               <div class="about">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, porro, amet fuga est consequatur maiores tempora sapiente eaque hic ea optio quas sed! Fuga odit, facere voluptates commodi error in!</p>
               </div>

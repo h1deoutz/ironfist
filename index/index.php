@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ironfist.com</title>
+    <title>ironfist.com</title
     <link rel="stylesheet" href="css/bootstrap.css">
   </head>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -157,7 +157,7 @@
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="margin-top: 10px; box-shadow: 10px 10px 10px 10px rgb(255, 255, 255);"> 
         <div class="carousel-inner">
           <div class="carousel-item active">
-           <picture> <source media="(max-width: 800px )" srcset="img-svg/logo.png" type=""><img src="img-svg/1.PNG" class="d-block w-100" alt="..." style=" height: 700px ;"></picture>
+           <picture> <source media="(max-width: 800px )" srcset="img-svg/ironfist-banner1.jpg" type=""><img src="img-svg/1.PNG" class="d-block w-100" alt="..." style=" height: 700px ;"></picture>
           </div>
           <div class="carousel-item active">
             <picture> <source media="(max-width: 800px )" srcset="img-svg/logo.png" type=""><img src="img-svg/1.PNG" class="d-block w-100" alt="..." style=" height: 700px ;" ></picture>
