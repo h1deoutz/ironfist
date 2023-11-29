@@ -1,17 +1,11 @@
-/*  A sessao "*" se aplica a todos os elementos */
-
 * {
     box-sizing: border-box;
 }
-
-/* Estilizaçao dos botoes de filtro da navbar */
 
 #btns {
     display: flex;
     margin-right: 70px;
 }
-
-/* Estilizaçao da navbar */
 
 .collapse {
     display: flex;
@@ -58,8 +52,6 @@
     right: 2vw;
 }
 
-/* Esta sessao esconde elementos da pagina usando disply: none */
-
 .remove .carousel {
     display: none;
 }
@@ -72,7 +64,10 @@
     display: none;
 }
 
-/* Estilizaçao da barra de pesquisa */
+.remove .banners {
+    display: none;
+    
+}
 
 .searchbar {
     position: absolute;
@@ -126,7 +121,6 @@
 
 .product-list {
     display: flex;
-    justify-content: ;
     margin-top: 50px;
     width: 100%;
     overflow: scroll;
@@ -163,11 +157,7 @@
     color: #0c1820;
     font-size: 1em;
     margin: 0;
-
-
 }
-
-/* Estilizaçao do botao de login */
 
 .login-buttom {
     font-size: 16px;
@@ -185,8 +175,6 @@
     font-weight: 500;
     padding-left: 7px;
 }
-
-/* Estilizaçao do botao do carrinho */
 
 .shopping-cart {
     display: inline;
@@ -221,8 +209,6 @@
     padding-left: 7px;
 }
 
-/* Estilizaçao do carrinho */
-
 .cart {
     position: fixed;
     border-left: solid 2px gray;
@@ -247,8 +233,6 @@
     align-items: center;
     justify-content: center;
 }
-
-/* Estilizaçao dos itens adicionados ao carrinho */
 
 #cartItem {
     margin: 10px;
@@ -374,8 +358,6 @@
     left: calc(100% - 25%);
 }
 
-/* Estilizaçao dos produtos da pagina principal */
-
 
  #root {
     display: flex;
@@ -406,8 +388,8 @@
 }
 
 .images {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 130%;
+    max-height: 130%;
     object-fit: cover;
     object-position: center;
 }
@@ -420,6 +402,14 @@
     align-items: center;
     justify-content: space-around;
     height: 110px;
+}
+
+.bottom p {
+    font-size: 1.1em;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: 1px;
 }
 
 .cart-item h2 {
@@ -448,8 +438,6 @@
     height: 40px;
     background-color: white;
 }
-
-/* Estilizaçao da pagina de checkout */
 
 .checkout-page {
     position: fixed;
@@ -480,8 +468,6 @@
     align-items: center;
     
 }
-
-/* Estilizaçao do formulario de identificaçao */
 
 .step1 h2 {
     display: flex;
@@ -553,22 +539,40 @@
     font-size: 500;
 }
 
-.checkbox-gender label input {
-    margin-bottom: 10px;
-    accent-color: #162938;
-    margin-right: 3px;
+.confirmar {
+    height: 70px;
+    background-color: #4267b3;
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    transition: .2s ease;
 }
 
-/* Estilizaçao da seleçao de forma de pagamento */
+.confirmar:hover {
+    letter-spacing: 1px;
+}
 
 .step2 {
+    opacity: 1;
     right: 0;
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    
+    transition: .2s ease;
+}
+
+.paymentForm {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.paymentForm.avaliable {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .step2 h2 {
@@ -583,8 +587,6 @@
 .step2 h6 {
     padding-bottom: 20px;
 }
-
-/* Estilizaçao do primeiro metodo de pagamento */
 
 .payment {
     display: flex;
@@ -623,12 +625,11 @@
     align-items: center;
 }
 
-.none .credit-card {
-    display: none;
-    transform: translateX(-500px);
+.credit-card {
+    display: none;  
 }
 
- .credit-card {
+.credit-card.avaliable{
     display: flex;
     flex-direction: column; 
 }
@@ -695,8 +696,6 @@
     margin-left: 10px;
 }
 
-/* Estilizaçao do botao de finalizar pagamento*/
-
 .finish {
     margin-top: 20px;
     margin-bottom: -20px;
@@ -707,6 +706,11 @@
     border-radius: 10px;
     cursor: pointer;
     border: none;
+    transition: .2s ease;
+}
+
+.finish:hover {
+    letter-spacing: 1px;
 }
 
 .finish span {
@@ -721,17 +725,108 @@
     color: #ffffff;
 }
 
-/* Estilizaçao do botao de continu*/
+.pix-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pix {
+    display: none;  
+}
+
+.pix.avaliable {
+    display: flex;
+    flex-direction: column; 
+}
+
+ .pix span {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+ .pix h6 {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+ .pix-title {
+    display: flex;
+}
+
+.pix p {
+    font-weight: 500;
+}
+
+.qr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.qr img {
+    width: 70%;
+}
+
+.boleto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boleto {
+    display: none;  
+}
+
+.boleto.avaliable {
+    display: flex;
+    flex-direction: column; 
+}
+
+ .boleto span {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+ .boleto h6 {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+ .boleto-title {
+    display: flex;
+}
+
+.boleto p {
+    font-weight: 500;
+}
+
+.imprimir {
+    display: flex;
+    background-color: #4267b3;
+    height: 70px;
+    color: white;
+
+}
 
 .back {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #4267b3;
     border-radius: 10px;
     cursor: pointer;
+    height: 80px;
     width: 80%;
+    pointer-events: all;
+    opacity: 1;
+    transition: .2s ease;
+
+}
+
+.back:hover {
+    letter-spacing: 1px;
 }
 
 .back span {
@@ -759,7 +854,6 @@
     font-size: 35px;
 }
 
-/* Estilizaçao do popup de login/cadastro */
 
 .wrapper {
     margin: 0;
@@ -819,8 +913,6 @@
     z-index: 1;
 }
 
-/* Estilizaçao do formulario de login */
-
 .wrapper .form-box.login {
    transition: transform .18s  ease;
    transform: translateX(0);
@@ -830,8 +922,6 @@
     transition: none;
     transform: translateX(-400px);
 }
-
-/* Estilizaçao do formulario de cadastro */
 
 .wrapper .form-box.register {
     position: absolute;
@@ -964,9 +1054,6 @@
     text-decoration: underline;
 }
 
-/* Estilizaçao do banner de frete gratis */
-
-
 .banner-frete {
     display: flex ;
     align-items: center;
@@ -997,9 +1084,6 @@
     align-items: center;
     border-radius: 15px;
 }
-
-/* Estilizaçao do rodapé */
-
 
 footer {
     margin-top: 50px;
@@ -1064,18 +1148,18 @@ footer p {
 #facebook {
     background-color: #4267b3;
 }
- 
-#whatsapp { 
-    background-color: #25d366; 
-} 
- 
-.footer-list { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 0.75rem; 
-    list-style: none; 
-} 
- 
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
 .footer-list .footer-link {
     color: rgb(170, 170, 170);
     transition: all 0.4s;
@@ -1117,4 +1201,79 @@ footer p {
     height: 100%;
     border-radius: 0px 4px 4px 0px;
     cursor: pointer;
+}
+
+.product-page {
+    display: flex;
+    margin-top: 30px;
+}
+
+.product-page img {
+    width: 50%;
+    height: 50%;
+    margin: -50px;
+    margin-left: 30px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.product-info p {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.product-info h2 {
+    margin-bottom: 20px;
+}
+
+.product-info button {
+    background-color: #ffffff;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid;
+    margin-top: 10px;
+    transition: .2s ease;
+}
+
+.product-info button:hover{
+    background-color: #f7f7f7;
+}
+
+.add button {
+    margin-top: 20px;
+    background-color: #009737;
+    color: white;
+    width: 250px;
+    height: 60px;
+    border-radius: 5px;
+    transition: .2s ease;
+}
+
+.add button:hover {
+    background-color: #007c2e;
+}
+
+.about {
+    width: 80%;
+    margin: 50px;
+}
+
+.description {
+    width: 40%;
+    margin: 70px
+}
+
+.description h2 {
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+
+.description p {
+    font-size: 1em;
+    font-weight: 400;
 }

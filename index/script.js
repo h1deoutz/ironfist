@@ -1,6 +1,4 @@
 
-/* Constantes dos botoes de filtro de produtos contendo a categoria ("id") e o titulo ("name") dos botoes */
-
 const btns=[
     {
         id: 1,
@@ -24,8 +22,6 @@ const btns=[
     },
 ]
 
-/* Sessao que cria div responsiva que é mandada de volta pro HTML pela div "btns" e filtra os produtos pela sua categoria ("id") */
-
 const filters = [...new Set (btns.map((btn)=>
     {return btn}))]
 
@@ -36,27 +32,13 @@ const filters = [...new Set (btns.map((btn)=>
         )
     }).join('');
 
-/* Constantes utilizadas em popups */
-
 const formOpenBtn = document.querySelector("#login-buttom"),
 iconClose = document.querySelector(".icon-close"),
 loginLink = document.querySelector("#login-link"),
 registerLink = document.querySelector("#form-register"),
 wrapper = document.querySelector(".wrapper"),
 navbtn = document.querySelector("#btns");
-let openShopping = document.querySelector('.shopping-cart');
-let closeShopping = document.querySelector('.cart-icon-close');
-let body = document.querySelector ('.body');
-let total = document.querySelector ('#total');
-let count = document.querySelector ('#count'); 
-let openCheckout = document.querySelector('.checkout');
-let closeCheckout = document.querySelector('.back');
-let openSearchbar = document.querySelector('.searchbar');
-let searchbar = document.querySelector('.searchbar');
-let openCreditcard = document.querySelector('#credit-card');
-let alterarCreditcard = document.querySelector('#alterar');
 
-/* Funçoes aplicadas para as constantes */
 
 formOpenBtn.addEventListener("click", () => wrapper.classList.add("show"));
 iconClose.addEventListener("click", () => wrapper.classList.remove("show"));
@@ -64,10 +46,23 @@ registerLink.addEventListener("click", () => wrapper.classList.add("active"));
 loginLink.addEventListener("click", () => wrapper.classList.remove("active"));
 navbtn.addEventListener("click", () => body.classList.add("remove"));
 
+
+let openShopping = document.querySelector('.shopping-cart');
+let closeShopping = document.querySelector('.cart-icon-close');
+let body = document.querySelector ('.body');
+let total = document.querySelector ('#total');
+let count = document.querySelector ('#count'); 
+
 openShopping.addEventListener("click", () => body.classList.add("active"));
 closeShopping.addEventListener('click', () =>{ body.classList.remove ('active');
 
+
 })
+
+let openCheckout = document.querySelector('.checkout');
+let closeCheckout = document.querySelector('.back');
+let openSearchbar = document.querySelector('.searchbar');
+let searchbar = document.querySelector('.searchbar');
 
 openCheckout.addEventListener("click", () => body.classList.add ('show'));
 closeCheckout.addEventListener("click", () => body.classList.remove ('show'));
@@ -77,8 +72,6 @@ openSearchbar.addEventListener("click", () => { searchbar.classList.remove ('non
 
 })
 
-/* Funçao responsavel por abrir e fechar a barra de pesquisa */
-
 document.addEventListener('click', e => {
     console.log(e.target)
     if(!searchbar.contains(e.target) && e.target !== openSearchbar) {
@@ -86,15 +79,34 @@ document.addEventListener('click', e => {
     }
 })
 
-/* Funçoes responsaveis por selecionar a forma de pagamento */
+let alterar1 = document.querySelector('#alterar-card');
+let alterar2 = document.querySelector('#alterar-pix');
+let alterar3 = document.querySelector('#alterar-boleto');
+let openCreditcard = document.querySelector('#credit-card');
+let creditCard = document.querySelector('.credit-card');
+let openPix = document.querySelector('#pix');
+let pix = document.querySelector('.pix');
+let openBoleto = document.querySelector('#boleto');
+let boleto = document.querySelector('.boleto');
 
 
 openCheckout.addEventListener("click", () => body.classList.add ('show'));
-openCheckout.addEventListener("click", () => body.classList.add ('none'));
-openCreditcard.addEventListener("click", () => body.classList.remove ('none'));
+openCreditcard.addEventListener("click", () => creditCard.classList.add ('avaliable'));
+alterar1.addEventListener("click", () => creditCard.classList.remove ('avaliable'));
+
 openCreditcard.addEventListener("click", () =>  body.classList.add ('pay1'));
-alterarCreditcard.addEventListener("click", () =>  body.classList.add('none'));
-alterarCreditcard.addEventListener("click", () =>  body.classList.remove ('pay1'));
+alterar1.addEventListener("click", () =>  body.classList.remove ('pay1'));
+openPix.addEventListener("click", () =>  body.classList.add ('pay1'));
+alterar2.addEventListener("click", () =>  body.classList.remove ('pay1'));
+openBoleto.addEventListener("click", () =>  body.classList.add ('pay1'));
+alterar3.addEventListener("click", () =>  body.classList.remove ('pay1'));
+
+openPix.addEventListener("click", () => pix.classList.add ('avaliable'));
+alterar2.addEventListener("click", () => pix.classList.remove ('avaliable'));
+
+openBoleto.addEventListener("click", () => boleto.classList.add ('avaliable'));
+alterar3.addEventListener("click", () => boleto.classList.remove ('avaliable'));
+
 closeShopping.addEventListener("click", () =>  body.classList.remove ('pay1'));
 closeShopping.addEventListener("click", () => { body.classList.add('none');
 
@@ -103,131 +115,72 @@ closeShopping.addEventListener("click", () => { body.classList.add('none');
 const product = [ 
     {
         "id":1,
-        "name": "Whey Protein Concentrado 1Kg Sabor Morango",
+        "name": "Whey Protein Concentrado 900g",
         "price": 50,
-        "image": "./img-svg/ironfist.whey.chocolate.png",
+        "image": "img-svg/whey_chocolate.jpeg",
         "category":"whey protein",
-        "link": "paginas/produto1.php"
-    },
-    {
-        "id":1,
-        "name": "Whey protein",
-        "price": 80,
-        "image": "img-svg/whey2.jpg",
-        "category":"whey protein",
-        "link": "paginas/produto1.php"
-    },
-    {
-        "id":1,
-        "name": "Whey protein",
-        "price": 100,
-        "image": "img-svg/whey3.jpeg",
-        "category":"whey protein",
-        "link": "paginas/produto1.php"
-    },
-    {
-        "id":1,
-        "name": "Whey protein",
-        "price": 170,
-        "image": "img-svg/whey4.png",
-        "category":"whey protein",
-        "link": "paginas/produto1.php"
+        "link": "paginas/produto1.html"
     },
     {
         "id":2,
-        "name": "Creatina",
+        "name": "Creatina Monohidratada 250g",
         "price": 40,
-        "image": "img-svg/creatina1.webp",
+        "image": "img-svg/creatina.jpeg",
         "category":"creatina",
-        "link": "paginas/produto1.php"
-    },
-    {
-        "id":2,
-        "name": "Creatina",
-        "price": 180,
-        "image": "img-svg/creatina2.webp",
-        "category":"creatina",
-        "link": "paginas/produto1.php"
-    },
-    {
-        "id":2,
-        "name": "Creatina",
-        "price": 90,
-        "image": "img-svg/creatina3.jpg",
-        "category":"creatina",
-        "link": "paginas/produto1.php"
+        "link": "paginas/produto1.html"
     },
     {
         "id":3,
-        "name": "Pre Treino",
+        "name": "Pré Treino Storm Chaser Sabor Laranja 300g",
         "price": 130,
-        "image": "img-svg/pre1.jpeg",
+        "image": "img-svg/pretreino1.png",
         "category":"pre treino",
-        "link": "paginas/produto1.php"
+        "link": "paginas/produto1.html"
     },
     {
         "id":3,
-        "name": "Pre Treino",
+        "name": "Pré Treino Storm Chaser Sabor Uva 300g",
         "price": 130,
-        "image": "img-svg/pre2.webp",
+        "image": "img-svg/pretreino2.png",
         "category":"pre treino",
-        "link": "paginas/produto1.php"
-    },
-    {
-        "id":3,
-        "name": "Pre Treino",
-        "price": 130,
-        "image": "img-svg/pre3.jpg",
-        "category":"pre treino",
-        "link": "paginas/produto1.php"
-    },
-    {
-        "id":1,
-        "name": "Whey Protein",
-        "price": 130,
-        "image": "img-svg/whey6.jpeg",
-        "category":"whey protein",
-        "link": "paginas/produto1.php"
+        "link": "paginas/produto1.html"
     },
     {
         "id":4,
-        "name": "Termogênico",
+        "name": "Termogênico Cosmic Blaze (60 Cápsulas)",
         "price": 130,
-        "image": "img-svg/termo1.jpeg",
+        "image": "img-svg/termogenico.png",
         "category":"termogenico",
-        "link": "paginas/produto1.php"
-    },
-    {
-        "id":4,
-        "name": "Termogênico",
-        "price": 130,
-        "image": "img-svg/termo2.jpeg",
-        "category": "termogenico",
-        "link": "paginas/produto1.php"
+        "link": "paginas/produto1.html"
     },
     {
         "id":5,
-        "name": "Glutamina",
+        "name": "Glutamina Cemetery Gates 250g ",
         "price": 130,
-        "image": "img-svg/glutamina3.jpeg",
+        "image": "img-svg/glutamina.jpeg",
         "category": "glutamina",
-        "link": "paginas/produto1.php"
+        "link": "paginas/produto1.html"
     },
     {
-        "id":1,
-        "name": "Whey Protein",
+        "id":6,
+        "name": "BCAA IronFist (60 Cápsulas)",
         "price": 130,
-        "image": "img-svg/whey5.jpeg",
-        "category": "whey protein",
-        "link": "paginas/produto1.php"
+        "image": "img-svg/bcaa.png",
+        "link": "paginas/produto1.html"
     },
     {
-        "id":1,
-        "name": "Whey Protein",
+        "id":7,
+        "name": "Hiprcalórioco Bloody Moon Sabor Chocolate 1kg",
         "price": 130,
-        "image": "img-svg/whey7.jpeg",
-        "category": "whey protein",
-        "link": "paginas/produto1.php"
+        "image": "img-svg/hipercalorico.jpeg",
+        "link": "paginas/produto1.html"
+    },
+    {
+        "id":8,
+        "name": "Beta Alanina The Gym Chemestry 250g",
+        "price": 130,
+        "image": "img-svg/betaalanina.jpeg",
+        "link": "paginas/produto1.html"
     },
 ];
 
@@ -246,9 +199,6 @@ const filterItems = (a)=>{
     }
     displayItem(flterCategories)
 }
-
-/* Sessao responsavel por adicionar os produtos ao site */
-
 const displayItem =(items) => {
 document.getElementById('root').innerHTML = items.map((item)=> 
 {
@@ -284,8 +234,6 @@ function delElement(a){
     displaycart();
 }
 
-/* Sessao responsavel por adicionar a div de carrinho vazio caso ao haja nenhum produto no carrinho */
-
 function displaycart(a){
     let j = 0, total=0;
     document.getElementById("count").innerHTML=cart.length;
@@ -297,9 +245,6 @@ function displaycart(a){
     else{
         document.getElementById("cartItem").innerHTML = cart.map((items)=>
         {
-
-            /* Sessao responsavel por criar a div do produto dentro do carrinho, tambem podemmos observar o "total", uma constante que te a funçao de somar os preços dos produtos e retornar o resultado para o HTMl */
-
             var {image, name, price, link} = items;
             total=total=price
             document.getElementById("total").innerHTML = " R$"+total+".00";
@@ -316,10 +261,7 @@ function displaycart(a){
     }
 
 }
-
-/* Funçoes responsaveis por formatar a escrita dos formmularios de cadastro de identidade */
-
-/* CPF */
+    
 
 const input = document.querySelector('#cpf')
 
@@ -333,8 +275,6 @@ input.addEventListener('keypress',() => {
     }
 })
 
-/* Data */
-
 const input2 = document.querySelector('#data')
 
 input2.addEventListener('keypress',() => {
@@ -346,8 +286,6 @@ input2.addEventListener('keypress',() => {
 }
 })
 
-/* CEP */
-
 const input3 = document.querySelector('#cep')
 
 input3.addEventListener('keypress',() => {
@@ -358,8 +296,6 @@ input3.addEventListener('keypress',() => {
 
 }
 })
-
-/* CPF (Pagamento com o cartao) */
 
 const input4 = document.querySelector('#cepeefi')
 
@@ -373,8 +309,6 @@ input4.addEventListener('keypress',() => {
     }
 }) 
 
-/* Numero do cartao */
-
 const input5 = document.querySelector('#card-number')
 
 input5.addEventListener('keypress',() => {
@@ -386,8 +320,6 @@ input5.addEventListener('keypress',() => {
 }
 })
 
-/* Data de validade do cartao */
-
 const input6 = document.querySelector('#validade')
 
 input6.addEventListener('keypress',() => {
@@ -398,8 +330,6 @@ input6.addEventListener('keypress',() => {
 
 }
 })
-
-/* Esta sessao filtra os produtos a barra de pesquisa e acordo com as teclas digitadas pelo usuario no input */
 
 console.log(searchbar);
 
@@ -433,3 +363,7 @@ div.innerHTML = product.map((items)=>
 }).join(''); 
 
 
+let confirm = document.querySelector('.confirmar');
+let paymentForm = document.querySelector('.paymentForm');
+
+confirm.addEventListener("click", () => paymentForm.classList.add ('avaliable'));
