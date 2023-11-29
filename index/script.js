@@ -112,14 +112,26 @@ closeShopping.addEventListener("click", () => { body.classList.add('none');
 
 })
 
-const product = [ 
+var produtos;
+function solicitacao() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {        
+         produtos = (this.responseText);
+        }
+    xhttp.open("GET", "selectprod.php", true);
+    xhttp.send();
+    const produtos = text.split("</br>")
+    }
+
+const product = [
+     
     {
         "id":1,
         "name": "Whey Protein Concentrado 900g",
         "price": 50,
         "image": "img-svg/whey_chocolate.jpeg",
         "category":"whey protein",
-        "link": "paginas/produto1.html"
+        "link": "paginas/produto1.php"
     },
     {
         "id":2,
@@ -235,7 +247,7 @@ function delElement(a){
 }
 
 function displaycart(a){
-    let j = 0, total=0;
+    let j = 0, total=0; 
     document.getElementById("count").innerHTML=cart.length;
     if(cart.length==0){
         document.getElementById('cartItem').innerHTML = `<span><ion-icon class="shopping-cart-icon-empty" name="cart-outline"></ion-icon></span>
@@ -246,7 +258,7 @@ function displaycart(a){
         document.getElementById("cartItem").innerHTML = cart.map((items)=>
         {
             var {image, name, price, link} = items;
-            total=total=price
+            total+=price;
             document.getElementById("total").innerHTML = " R$"+total+".00";
             return(
                 `<div class='cart-item'>
