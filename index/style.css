@@ -786,15 +786,21 @@
  .boleto span {
     font-size: 2em;
     margin-right: 10px;
+    
 }
 
  .boleto h6 {
     font-size: 1em;
-    margin-top: 10px;
+    margin-top: 14px;
 }
 
  .boleto-title {
     display: flex;
+}
+
+.boleto-title {
+    font-size: 1em;
+    color: black;
 }
 
 .boleto p {
@@ -803,10 +809,15 @@
 
 .imprimir {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #4267b3;
     height: 70px;
     color: white;
+}
 
+.imprimir h6 {
+    padding-top: 16px;
 }
 
 .back {
