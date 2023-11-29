@@ -14,4 +14,5 @@ $senha = $_GET ['senha'];
   }
   
   $conn->close();
+  header("location:/ironfist/index")
 ?>
