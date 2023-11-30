@@ -1,3 +1,6 @@
+<?php
+        session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -103,6 +106,14 @@
 
     <script src="estoque.js"></script>
 
+    <?php
     
+
+    echo "Usuario: ". $_SESSION['usuarioNome'];    
+    
+    ?>
+    <br>
+    <a href="sair.php">Sair</a>
+
 </body>
 </html>
