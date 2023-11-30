@@ -112,18 +112,30 @@ closeShopping.addEventListener("click", () => { body.classList.add('none');
 
 })
 
-var produtos;
+/*var produtos;
+let product;
 function solicitacao() {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {        
          produtos = (this.responseText);
+        // const produtos = produtos.split("</br>");
+         document.getElementById("produtos").innerHTML=produtos;//como eu erro uma parada dessas ¬¬" BURRRRRRRRO
         }
     xhttp.open("GET", "selectprod.php", true);
     xhttp.send();
-    const produtos = text.split("</br>")
+   
     }
+    function teste(){
+        const product = "["+ document.getElementById("produtos").innerHTML.split("<br>") +"]";
+    
+        console.log(product);
+        alert(product);
 
-const product = [
+    }*/
+
+    
+
+    const product = [
      
     {
         "id":1,
@@ -194,7 +206,7 @@ const product = [
         "image": "img-svg/betaalanina.jpeg",
         "link": "paginas/produto1.html"
     },
-];
+]
 
 const  categories = [...new Set(product.map((item)=>
     {return item}))]
